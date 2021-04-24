@@ -1,0 +1,470 @@
+@import "base/reset";
+@import "base/mixins";
+@import "base/variables";
+
+
+body {
+  font-family: $montserrat;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 960px;
+  padding: 0 10px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+// Style header start
+
+.header {
+  background-image: url(../images/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 222px;
+  padding-top: 40px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+  }
+
+  &__logo {
+    @include font(20px, 700, 24px);
+
+    &-link {
+      color: $main-color;
+    }
+  }
+
+  &__registr {
+    &-btn {
+      background-color: transparent;
+      border: 2px solid transparent;
+      color: $main-color;
+      margin-left: 20px;
+      padding: 10px 17px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+      &:hover {
+        border: 2px solid $main-color;
+        border-radius: 30px;
+        opacity: 0.7;
+        box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+      }
+    }
+  }
+
+  .header__title {
+    @include font(52px, 700, 63px);
+    max-width: 470px;
+    text-align: center;
+    margin-bottom: 28px;
+    color: $main-color;
+
+    &-paragraf {
+      font-family: $roboto;
+      @include font(24px, 300, 24px);
+      color: #f7f3f2;
+      margin-bottom: 45px;
+    }
+
+    &-btn {
+      padding: 10px 18px;
+      background-color: $btn-color;
+      border-radius: 40px;
+      color: $main-color;
+
+      &:hover {
+        box-shadow: 0 3px 3px black;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    @include font(52px, 700, 63px);
+    max-width: 470px;
+    text-align: center;
+    margin-bottom: 28px;
+    color: $main-color;
+
+    &-paragraf {
+      font-family: $roboto;
+      @include font(24px, 300, 24px);
+      color: #f7f3f2;
+      margin-bottom: 45px;
+    }
+
+    &-btn {
+      padding: 10px 18px;
+      background-color: $btn-color;
+      border-radius: 40px;
+      color: $main-color;
+
+      &:hover {
+        outline: 0;
+        background-color: #FFF;
+        color: #000;
+      }
+    }
+  }
+}
+
+// Style header end
+
+//Style section dream start
+.dream {
+  padding-bottom: 95px;
+  padding-top: 89px;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font(26px, 700, 32px);
+    margin-bottom: 35px;
+    color: #444444;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__card {
+    position: relative;
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &-caption {
+      max-width: 250px;
+      position: absolute;
+      bottom: 21px;
+      left: 25px;
+      right: 25px;
+    }
+
+    &-btn {
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      width: 70px;
+      height: 20px;
+      display: block;
+      background-color: $btn-color;
+      border-radius: 40px;
+      padding: 5px 10px;
+      color: $main-color;
+    }
+
+    &-title {
+      @include font(24px, 700, 26px);
+      color: $main-color;
+      margin-top: 15px;
+      margin-bottom: 10px;
+    }
+
+    &-paragraf {
+      font-family: $roboto;
+      @include font(14px, 300, 14px);
+      color: #e3e3e3;
+    }
+
+    img {
+      min-height: 400px;
+      object-fit: cover;
+    }
+  }
+}
+
+//Style section dream end
+
+//Style section partners start
+
+.partners {
+  margin-bottom: 95px;
+
+  &__title {
+    margin-bottom: 35px;
+    @include font(26px, 700, 32px);
+    text-align: center;
+    color: #444444;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+  }
+
+  &__card {
+    position: relative;
+    max-width: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 19px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &-icon {
+      position: absolute;
+      bottom: 0px;
+      right: 0px;
+    }
+  }
+
+  &__images {
+    position: relative;
+  }
+
+  &__name {
+    @include font(14px, 700, 17px);
+    color: #444444;
+    margin-top: 17px;
+    margin-bottom: 12px;
+  }
+
+  &__info {
+    font-family: $roboto;
+    @include font(16px, 300, 14px);
+    text-align: center;
+    color: $second-color;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn {
+    padding: 11px 21px;
+    border: 2px solid $btn-color;
+    border-radius: 40px;
+    color: $btn-color;
+    @include font(14px, 700, 17px);
+
+    &:hover {
+      background-color: $btn-color;
+      color: black;
+    }
+  }
+}
+
+//Style section dream end
+
+//Style section holiday start
+
+.holiday {
+  margin-bottom: 95px;
+
+  &__title {
+    @include font(26px, 700, 32px);
+    text-align: center;
+    color: #444444;
+  }
+
+  &__gallery {
+    padding-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+
+    &-image {
+      grid-column: span 2;
+      position: relative;
+      transition: 0.7s;
+
+      &:hover {
+        transition: 0.7s;
+        transform: scale(0.9);
+        opacity: 0.65;
+      }
+    }
+
+    &-column {
+      grid-column: span 4;
+    }
+
+    &-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      @include font(22px, 700, 27px);
+      color: $main-color;
+      text-align: center;
+    }
+  }
+
+  img {
+    min-height: 310px;
+    object-fit: cover;
+  }
+}
+
+//Style section holiday end
+
+//Style section activity start
+
+.activity {
+  margin-bottom: 100px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    @include font(26px, 700, 32px);
+    color: #444444;
+    padding-bottom: 43px;
+  }
+
+  &__paragraf {
+    font-family: $roboto;
+    @include font(18px, 300, 14px);
+    color: $second-color;
+  }
+
+  &__form-fild {
+    width: 299px;
+    height: 40px;
+    border: 0.7px solid #999999;
+    margin-top: 25px;
+
+    &[placeholder] {
+      font-family: $roboto;
+      @include font(14px, 300, 16px);
+      color: #999999;
+      padding-left: 10px;
+    }
+  }
+
+  &__form-btn {
+    width: 172px;
+    height: 40px;
+    background-color: $btn-color;
+    color: $main-color;
+    border-radius: 40px;
+    border: 0;
+    outline: none;
+    margin-left: 10px;
+
+    &:hover {
+      background-color: #FFF;
+      color: black;
+      box-shadow: 0 3px 3px black;
+    }
+  }
+}
+
+//Style section activity end
+
+.line-red {
+  display: block;
+  width: 100%;
+  border: 2px solid $btn-color;
+  background-color: $btn-color;
+}
+
+//Style footer start
+.footer {
+  padding-top: 38px;
+  padding-bottom: 36px;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 100%;
+    top: 0;
+    height: 2px;
+    display: block;
+    background-color: $btn-color;
+    position: absolute;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__dreamshare {
+    @include font(16px, 400, 20px);
+    color: $btn-color;
+    text-transform: uppercase;
+  }
+
+  &__company {
+    &-title {
+      @include font(14px, 700, 17px);
+      color: #444444;
+      padding-bottom: 11px;
+    }
+
+    &-link {
+      @include font(14px, 300, 26px);
+      font-family: $roboto;
+      color: #999999;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__partners {
+    @include font(14px, 700, 17px);
+  }
+
+  &__logo {
+    text-align: right;
+
+    &-paragraf {
+      @include font(10px, 700, 12px);
+      letter-spacing: 1px;
+      color: #cccccc;
+      padding-bottom: 7px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .partners__cards {
+    max-width: 492px;
+    width: 100%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+
+  .partners__card {
+    max-width: 236px;
+    margin: 0 0 40px 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  
+}
