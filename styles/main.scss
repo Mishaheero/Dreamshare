@@ -2,7 +2,6 @@
 @import "base/mixins";
 @import "base/variables";
 
-
 body {
   font-family: $montserrat;
   font-size: 14px;
@@ -28,7 +27,9 @@ body {
   &__inner {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 150px;
+    align-items: center;
+    padding-bottom: 147px;
+
   }
 
   &__logo {
@@ -50,46 +51,14 @@ body {
       &:first-child {
         margin-left: 0;
       }
+
       &:hover {
         border: 2px solid $main-color;
         border-radius: 30px;
         opacity: 0.7;
-        box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+        box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
       }
     }
-  }
-
-  .header__title {
-    @include font(52px, 700, 63px);
-    max-width: 470px;
-    text-align: center;
-    margin-bottom: 28px;
-    color: $main-color;
-
-    &-paragraf {
-      font-family: $roboto;
-      @include font(24px, 300, 24px);
-      color: #f7f3f2;
-      margin-bottom: 45px;
-    }
-
-    &-btn {
-      padding: 10px 18px;
-      background-color: $btn-color;
-      border-radius: 40px;
-      color: $main-color;
-
-      &:hover {
-        box-shadow: 0 3px 3px black;
-      }
-    }
-  }
-
-  &__box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   &__title {
@@ -111,13 +80,21 @@ body {
       background-color: $btn-color;
       border-radius: 40px;
       color: $main-color;
+      font-weight: 700;
 
       &:hover {
         outline: 0;
-        background-color: #FFF;
+        background-color: #fff;
         color: #000;
       }
     }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -349,46 +326,42 @@ body {
     color: $second-color;
   }
 
-  &__form-fild {
-    width: 299px;
-    height: 40px;
-    border: 0.7px solid #999999;
+  &__form {
     margin-top: 25px;
 
-    &[placeholder] {
-      font-family: $roboto;
-      @include font(14px, 300, 16px);
-      color: #999999;
-      padding-left: 10px;
+    &-fild {
+      width: 299px;
+      height: 40px;
+      border: 0.7px solid #999999;
+
+      &[placeholder] {
+        font-family: $roboto;
+        @include font(14px, 300, 16px);
+        color: #999999;
+        padding-left: 10px;
+      }
     }
-  }
 
-  &__form-btn {
-    width: 172px;
-    height: 40px;
-    background-color: $btn-color;
-    color: $main-color;
-    border-radius: 40px;
-    border: 0;
-    outline: none;
-    margin-left: 10px;
+    &-btn {
+      padding: 11px 27px;
+      background-color: $btn-color;
+      color: $main-color;
+      border-radius: 40px;
+      border: 0;
+      outline: none;
+      margin-left: 10px;
 
-    &:hover {
-      background-color: #FFF;
-      color: black;
-      box-shadow: 0 3px 3px black;
+      &:hover {
+        background-color: #fff;
+        color: black;
+        box-shadow: 0 3px 3px black;
+      }
     }
   }
 }
 
 //Style section activity end
 
-.line-red {
-  display: block;
-  width: 100%;
-  border: 2px solid $btn-color;
-  background-color: $btn-color;
-}
 
 //Style footer start
 .footer {
@@ -397,7 +370,7 @@ body {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     width: 100%;
     top: 0;
     height: 2px;
@@ -428,6 +401,7 @@ body {
       @include font(14px, 300, 26px);
       font-family: $roboto;
       color: #999999;
+
       &:hover {
         opacity: 0.7;
       }
@@ -450,8 +424,7 @@ body {
   }
 }
 
-
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
   .partners__cards {
     max-width: 492px;
     width: 100%;
@@ -465,6 +438,203 @@ body {
   }
 }
 
-@media screen and (max-width: 767px) {
-  
+@media screen and (max-width: 600px) {
+
+  //style mobile header start
+  .header {
+    padding: 20px 0 153px 0;
+
+    &__inner {
+      flex-direction: column;
+      padding-bottom: 26px;
+    }
+
+
+    &__registr {
+      order: -1;
+
+      &-btn {
+        margin-bottom: 97px;
+      }
+    }
+
+    &__title {
+      @include font(30px, 700, 36px);
+      margin-bottom: 5px;
+
+      &-paragraf {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 27px;
+      }
+
+      &-btn {
+        padding: 11px 46px;
+      }
+    }
+  }
+
+
+  //style mobile header end
+
+  //style dream header start
+  .dream {
+    padding: 35px 0;
+
+    &__title {
+      @include font(22px, 700, 27px);
+      margin-bottom: 15px;
+    }
+
+    &__cards {
+      flex-direction: column;
+    }
+
+    &__card {
+      padding-bottom: 10px;
+      margin: 0;
+      width: 100%;
+
+      &-btn {
+        font-size: 10px;
+        line-height: 12px;
+      }
+
+      &-title {
+        padding-top: 18px;
+        padding-bottom: 10px;
+        line-height: 14px;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      border-radius: 5px;
+      min-height: auto;
+      height: 240px;
+    }
+  }
+
+
+  //style dream  end
+
+  //style partners start
+
+  .partners {
+    margin-bottom: 35px;
+
+    &__title {
+      margin-bottom: 14px;
+    }
+
+    &__cards {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__card {
+      margin-bottom: 16px;
+    }
+
+    &__btn {
+      margin-top: 20px;
+      padding: 11px 72px;
+    }
+  }
+
+  //style partners end
+
+  //style holiday start
+
+  .holiday {
+    margin-bottom: 35px;
+
+    &__gallery-image {
+      grid-column: span 6;
+      gap: 10px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      max-height: 120px;
+      min-height: auto;
+    }
+  }
+
+  //style holiday end
+
+  //style activity start
+  .activity {
+    margin-bottom: 40px;
+
+    &__title {
+      padding-bottom: 9px;
+      @include font(22px, 700, 27px);
+      text-align: center;
+    }
+
+    &__form {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-fild {
+        margin-bottom: 10px;
+      }
+
+      &-btn {
+        padding: 12px 95px;
+      }
+    }
+
+  }
+//style activity end
+
+// Style footer start
+  .footer {
+    padding-top: 19px;
+    padding-bottom: 22px;
+
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__dreamshare {
+      margin-bottom: 13px;
+    }
+
+    &__company-title {
+      text-align: center;
+    }
+
+    &__company {
+     margin-bottom: 6px;
+
+      &-list {
+        max-width: 280px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      &-link {
+        padding-left: 10px;
+      }
+    }
+    &__partners {
+        margin-bottom: 14px;
+    }
+    &__logo-paragraf {
+      text-align: center;
+    }
+  }
+
 }
+
+// Style footer end
